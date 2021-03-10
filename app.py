@@ -21,10 +21,13 @@ import pandas as pd
 from flask import Flask, render_template, request
 import json
 import pickle
+import xgboost as xgb
+
 
 app = Flask(__name__)
 
-loaded_model = json.loads('model_file.json')
+loaded_model = xgb.XGBClassifier(objective='reg:logistic')
+loaded_model.load_model('trained_model.model')
 
 with open("vocabulary.txt", "r") as data:
     vocabulary = ast.literal_eval(data.read())
