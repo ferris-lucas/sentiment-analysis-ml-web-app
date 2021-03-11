@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Base ML model</title>
+    <title>Sentiment Analysis with Machine Learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
      <style>
         body {
-            background-color: #E6E6FA
+
             }
+        div {
+        margin-bottom: 10px;
+        }
+        label {
+          display: inline-block;
+          width: 130px;
+          text-align: right;
+        }
     </style>
 </head>
 <body>
         <h1> Predict review sentiment </h1>
          <form action = {{url_for('make_prediction')}} method = "post">
           <p>Enter a movie review:</p>
-         <p><input type="string" name="user_input"/></p>
-         <p><input type = "submit" value="predict"/></p>
+         <textarea type="string" name="user_input" cols="100" rows="5">
+         </textarea>
+         <p><input type = "submit" value="Predict"/></p>
       </form>
 
         <h3>{{ prediction_text }} </h3>
