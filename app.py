@@ -1,28 +1,8 @@
-import pandas as pd
-from flask import Flask, render_template, request
-import numpy as np
-import pandas as pd
 import re
-from nltk.corpus import stopwords
-from bs4 import BeautifulSoup
-from sklearn.feature_extraction.text import CountVectorizer
-import xgboost as xgb
-from sklearn.model_selection import cross_val_score
-from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score
-import os
-import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
-import joblib
-import joblib
 import ast
 import pandas as pd
 from flask import Flask, render_template, request
-import json
-import pickle
 import xgboost as xgb
-
 
 app = Flask(__name__)
 

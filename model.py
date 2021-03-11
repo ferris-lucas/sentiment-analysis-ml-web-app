@@ -96,9 +96,7 @@ train_X[1]
 
 train_y[1]
 
-import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
-import joblib
 
 vectorizer = CountVectorizer(max_features=5000)
 
@@ -123,18 +121,10 @@ train_X = pd.DataFrame(train_X[10000:])
 val_y = pd.DataFrame(train_y[:10000])
 train_y = pd.DataFrame(train_y[10000:])
 
-import numpy as np
 import pandas as pd
 import re
-from nltk.corpus import stopwords
-from bs4 import BeautifulSoup
-from sklearn.feature_extraction.text import CountVectorizer
 import xgboost as xgb
-from sklearn.model_selection import cross_val_score
-from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
-import os
 
 features_train = features_train[:20000]
 features_train.shape

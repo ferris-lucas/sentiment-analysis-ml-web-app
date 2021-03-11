@@ -11,7 +11,7 @@
 </head>
 <body>
         <h1> Predict review sentiment </h1>
-         <form action = {{ url_for('make_prediction')}} method = "post">
+         <form action = {{url_for('make_prediction')}} method = "post">
           <p>Enter a movie review:</p>
          <p><input type="string" name="user_input"/></p>
          <p><input type = "submit" value="predict"/></p>

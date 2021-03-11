@@ -1,2 +1,2 @@
 # deploy-ml-model-flask
- deploy your ml model using flask
+ deploy sentiment analysis ml model using flask
