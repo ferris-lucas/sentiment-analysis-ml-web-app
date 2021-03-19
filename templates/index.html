@@ -22,7 +22,7 @@
         <h1> Predict review sentiment </h1>
          <form action = {{url_for('make_prediction')}} method = "post">
           <p>Enter a movie review:</p>
-         <textarea type="string" name="user_input" cols="100" rows="5">
+         <textarea placeholder="Type in or paste here..." type="string" name="user_input" cols="50" rows="5">
          </textarea>
          <p><input type = "submit" value="Predict"/></p>
       </form>
