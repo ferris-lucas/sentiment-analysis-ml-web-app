@@ -39,7 +39,7 @@ def make_prediction():
     else:
         msg = "Negative review."
 
-    return render_template("index.html",   prediction_text=msg, user_input=user_input)
+    return render_template("index.html", prediction_text=msg, prediction=prediction)
 
 
 if __name__ == '__main__':
