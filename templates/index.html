@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">    
     <style>
     body {
-    background-image: url("static/img/background3.jpg");
+    background-image: url("static/img/background.jpg");
     background-size : cover;
     }
 
@@ -67,10 +67,10 @@
 
     .image {
         margin: auto;
-        padding: 6px;
-        width: 128px;
-        height: 128px;
-        box-shadow: -1px 8px 10px #111215;
+        padding: 0px;
+        width: 130px;
+        height: 130px;
+        box-shadow: -1px 7px 9px #111215;
         overflow: hidden;
         border-radius: 50%;
         position: relative;
@@ -109,9 +109,9 @@
             </div>
         </div>
     <div class="row"></div>
-    <form action = {{url_for('make_prediction')}} method = "post">
+    <form id="form" action = {{url_for('make_prediction')}} method = "post">
         <textarea id='userReview' placeholder='Type in or paste here...' name='user_input' class="form-control"></textarea>
-        <input type='submit' value='Predict' class="btn btn-primary" onclick="showImage()">
+        <input type='submit' value="Send" id="submit" class="btn btn-primary">
         <button id='clearReview' class="btn btn-danger">Clear text</button>
     </form>
     <div class="row">
