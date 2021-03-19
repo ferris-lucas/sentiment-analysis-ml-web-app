@@ -15,7 +15,7 @@ with open("vocabulary.txt", "r") as data:
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', prediction_text="Enter review and press predict.")
 
 
 @app.route('/predict', methods=['POST', ])
@@ -35,9 +35,9 @@ def make_prediction():
         [prediction] = loaded_model.predict(review_bow)
 
     if prediction == 1:
-        msg = "Positive review."
+        msg = "According to our model, this was a positive review."
     else:
-        msg = "Negative review."
+        msg = "According to our model, this was a negative review."
 
     return render_template("index.html", prediction_text=msg, prediction=prediction)
 
