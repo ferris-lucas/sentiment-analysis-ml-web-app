@@ -2,6 +2,8 @@
 <h3>Description</h3>
 This API receives data input (movie reviews) and outputs a prediction whether the sentiment of the reviewer of the title was Positive or Negative. The prediction is done by a model developed with XGBoost, using IMDB dataset available online. The trained model was serialized and uploaded to the site.
 
+![image](https://user-images.githubusercontent.com/75485471/111921338-cae76800-8a72-11eb-9dcc-840f2e8b8516.png)
+
 <h3>Access</h3>
 Link to web app: https://my-sentiment-analysis-web-app.herokuapp.com/
 
